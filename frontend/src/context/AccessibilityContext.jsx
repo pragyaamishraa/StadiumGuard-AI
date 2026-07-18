@@ -1,0 +1,57 @@
+import { createContext, useContext, useEffect, useMemo, useState } from "react";
+
+const AccessibilityContext = createContext(null);
+
+/**
+ * Provides global accessibility preferences (high contrast, large text,
+ * text-to-speech) shared across the entire app. State lives in memory only
+ * for this session — no browser storage is used.
+ */
+export function AccessibilityProvider({ children }) {
+  const [highContrast, setHighContrast] = useState(false);
+  const [largeText, setLargeText] = useState(false);
+  const [ttsEnabled, setTtsEnabled] = useState(false);
+
+  useEffect(() => {
+    document.body.classList.toggle("high-contrast", highContrast);
+  }, [highContrast]);
+
+  useEffect(() => {
+    document.body.classList.toggle("large-text", largeText);
+  }, [largeText]);
+
+  const speak = (text) => {
+    if (!ttsEnabled || !("speechSynthesis" in window)) return;
+    window.speechSynthesis.cancel();
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.rate = 0.95;
+    window.speechSynthesis.speak(utterance);
+  };
+
+  const value = useMemo(
+    () => ({
+      highContrast,
+      setHighContrast,
+      largeText,
+      setLargeText,
+      ttsEnabled,
+      setTtsEnabled,
+      speak,
+    }),
+    [highContrast, largeText, ttsEnabled]
+  );
+
+  return (
+    <AccessibilityContext.Provider value={value}>
+      {children}
+    </AccessibilityContext.Provider>
+  );
+}
+
+export function useAccessibility() {
+  const ctx = useContext(AccessibilityContext);
+  if (!ctx) {
+    throw new Error("useAccessibility must be used within AccessibilityProvider");
+  }
+  return ctx;
+}

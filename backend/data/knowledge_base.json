@@ -1,0 +1,102 @@
+[
+  {
+    "id": "gate-a",
+    "title": "Gate A Location",
+    "content": "Gate A is located on the North side of the stadium, facing the main parking lot. It serves sections 1 through 8 and has 6 ticket scanners. Gate A opens 3 hours before kickoff."
+  },
+  {
+    "id": "gate-b",
+    "title": "Gate B Location",
+    "content": "Gate B is located on the East side of the stadium, next to the metro station exit. It serves sections 9 through 16 and includes a dedicated accessible entrance with ramp access."
+  },
+  {
+    "id": "gate-c",
+    "title": "Gate C Location",
+    "content": "Gate C is located on the South side of the stadium near the media center. It serves sections 17 through 24 and is typically the least congested gate during peak entry hours."
+  },
+  {
+    "id": "gate-d",
+    "title": "Gate D Location",
+    "content": "Gate D is located on the West side of the stadium, closest to the bus terminal. It serves sections 25 through 32 and has priority lanes for season ticket holders."
+  },
+  {
+    "id": "seating-a",
+    "title": "Seating Block A Directions",
+    "content": "Seating block A (seats A1-A50) is accessed via Gate A, up the North staircase to Level 1, then follow the blue signage to your row. Elevators are available near Gate A for accessible seating."
+  },
+  {
+    "id": "seating-b",
+    "title": "Seating Block B Directions",
+    "content": "Seating block B (seats B1-B50) is accessed via Gate B, taking the East escalator to Level 2. Row letters are marked on overhead signs every 10 meters."
+  },
+  {
+    "id": "restroom-locations",
+    "title": "Restroom Locations",
+    "content": "Restrooms are available near every gate on Level 1 and Level 2. The nearest restroom to any seating block is typically within a 2-minute walk, marked with blue restroom icons on stadium signage. Accessible restrooms are located next to Gate B and Gate D."
+  },
+  {
+    "id": "food-stalls",
+    "title": "Food Stalls and Options",
+    "content": "Food options include international cuisine counters near Gate A, a vegetarian and vegan zone near Gate C, halal-certified stalls near Gate B, and quick snack kiosks on every concourse level. Prices are displayed digitally and updated in real time."
+  },
+  {
+    "id": "prohibited-items",
+    "title": "Prohibited Items",
+    "content": "Prohibited items include outside food and drinks, glass containers, weapons of any kind, laser pointers, drones, large bags exceeding 30x30x15 cm, fireworks, and professional camera equipment without media accreditation."
+  },
+  {
+    "id": "match-schedule",
+    "title": "Match Schedule",
+    "content": "Match schedules are updated daily on the stadium app and official boards near each gate. Kickoff times, halftime duration (15 minutes), and gate closing times (30 minutes after kickoff) are posted at all entrances."
+  },
+  {
+    "id": "medical-room",
+    "title": "Medical Room Location",
+    "content": "The main medical room is located on Level 1, between Gate B and Gate C, marked with a red cross sign. Additional first-aid stations are available near Gate A and Gate D for minor injuries."
+  },
+  {
+    "id": "lost-property",
+    "title": "Lost and Found Procedure",
+    "content": "If you lose an item such as a wallet or phone, report it immediately to any volunteer or the Lost and Found desk located near Gate C. You can also report it through the Stadium Guardian app's Emergency Assistant page for faster tracking."
+  },
+  {
+    "id": "accessible-entrances",
+    "title": "Accessible Entrances",
+    "content": "Gate B and Gate D have dedicated accessible entrances with ramps, wide turnstiles, and no-stairs access to elevators. Wheelchair users are encouraged to use these gates for the smoothest entry experience."
+  },
+  {
+    "id": "wheelchair-routes",
+    "title": "Wheelchair-Friendly Routes",
+    "content": "Wheelchair-friendly routes avoid staircases and escalators, using ramps and elevators near Gate B, Gate D, and the central concourse. Accessible seating areas are located on Level 1 near sections 10, 18, and 26."
+  },
+  {
+    "id": "parking-info",
+    "title": "Parking Information",
+    "content": "The main parking lot is adjacent to Gate A with capacity for 2,000 vehicles. Overflow parking is available near Gate D with a free shuttle running every 10 minutes to the stadium entrance."
+  },
+  {
+    "id": "public-transport",
+    "title": "Public Transportation Guidance",
+    "content": "The nearest metro station exits directly into Gate B. Bus routes 12, 45, and 67 stop at the bus terminal near Gate D. Ride-share pickup and drop-off zones are located near Gate C to reduce congestion at main entrances."
+  },
+  {
+    "id": "emergency-evacuation",
+    "title": "Emergency Evacuation Procedures",
+    "content": "In case of an emergency, follow illuminated green exit signs to the nearest gate. Do not use elevators during a fire evacuation. Stadium volunteers and staff wearing high-visibility vests will direct crowd flow toward designated assembly points outside the stadium perimeter."
+  },
+  {
+    "id": "volunteer-coordination",
+    "title": "Volunteer Coordination",
+    "content": "Volunteers are stationed at every gate, concourse, and seating block, identifiable by orange vests. They can assist with directions, accessibility needs, translation support, and emergency reporting."
+  },
+  {
+    "id": "sustainability-practices",
+    "title": "Sustainability Practices",
+    "content": "The stadium uses solar-assisted lighting, water-recycling systems for restrooms, and separate waste bins for recyclables, compost, and general waste. Fans are encouraged to use refillable water bottles at hydration stations located on every level."
+  },
+  {
+    "id": "ticket-issues",
+    "title": "Ticket and Entry Issues",
+    "content": "If your ticket fails to scan, proceed to the Guest Services desk near Gate A with a valid ID. Duplicate or fraudulent ticket claims are resolved on the spot by verifying purchase records."
+  }
+]
