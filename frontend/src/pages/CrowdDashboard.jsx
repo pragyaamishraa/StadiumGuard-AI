@@ -57,12 +57,9 @@ export default function CrowdDashboard() {
     }
   };
 
-  // Intentionally runs once on mount only — loadSnapshot/loadRecommendations
-  // are re-created each render but don't need to be re-triggered on their own change.
   useEffect(() => {
     loadSnapshot();
     loadRecommendations();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const chartData =

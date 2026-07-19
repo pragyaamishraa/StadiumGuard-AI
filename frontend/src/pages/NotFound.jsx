@@ -9,7 +9,7 @@ export default function NotFound() {
       </div>
       <h1 className="text-3xl font-extrabold">404</h1>
       <p className="mt-2 text-slate-400">
-        Looks like this page took a wrong turn. Let&apos;s get you back to the main concourse.
+        Looks like this page took a wrong turn. Let's get you back to the main concourse.
       </p>
       <Link
         to="/"
