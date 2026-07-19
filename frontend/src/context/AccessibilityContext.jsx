@@ -28,6 +28,16 @@ export function AccessibilityProvider({ children }) {
     window.speechSynthesis.speak(utterance);
   };
 
+  // Always plays, regardless of the global toggle — for explicit "Listen"
+  // button clicks, where the click itself is the user's request to hear it.
+  const forceSpeak = (text) => {
+    if (!("speechSynthesis" in window)) return;
+    window.speechSynthesis.cancel();
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.rate = 0.95;
+    window.speechSynthesis.speak(utterance);
+  };
+
   const value = useMemo(
     () => ({
       highContrast,
@@ -37,6 +47,7 @@ export function AccessibilityProvider({ children }) {
       ttsEnabled,
       setTtsEnabled,
       speak,
+      forceSpeak,
     }),
     [highContrast, largeText, ttsEnabled]
   );

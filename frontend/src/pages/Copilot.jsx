@@ -33,7 +33,7 @@ export default function Copilot() {
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const { language } = useLanguage();
-  const { speak } = useAccessibility();
+  const { speak, forceSpeak } = useAccessibility();
   const { showToast } = useToast();
   const scrollRef = useRef(null);
 
@@ -109,7 +109,7 @@ export default function Copilot() {
           aria-label="Chat conversation"
         >
           {messages.map((msg, idx) => (
-            <ChatBubble key={idx} message={msg} onSpeak={speak} />
+            <ChatBubble key={idx} message={msg} onSpeak={forceSpeak} />
           ))}
           {loading && (
             <div className="flex items-center gap-2 text-sm text-slate-500">
