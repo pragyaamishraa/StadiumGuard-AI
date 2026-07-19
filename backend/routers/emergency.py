@@ -2,7 +2,7 @@
 import re
 import uuid
 
-from fastapi import APIRouter
+from fastapi import APIRouter, HTTPException
 
 from backend.core.database import save_emergency_report
 from backend.core.security import sanitize_text
@@ -54,8 +54,11 @@ def _parse_gemini_emergency_output(raw_text: str) -> dict:
 @router.post("/report", response_model=EmergencyResponse)
 async def report_emergency(request: EmergencyRequest) -> EmergencyResponse:
     """Triage an incoming emergency report and simulate volunteer notification."""
-    clean_location = sanitize_text(request.location, max_length=200)
-    clean_description = sanitize_text(request.description, max_length=1000)
+    try:
+        clean_location = sanitize_text(request.location, max_length=200)
+        clean_description = sanitize_text(request.description, max_length=1000)
+    except ValueError as exc:
+        raise HTTPException(status_code=422, detail=str(exc)) from exc
 
     prompt = gemini_service.build_emergency_prompt(
         incident_type=request.incident_type,

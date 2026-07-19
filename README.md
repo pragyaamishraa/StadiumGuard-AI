@@ -53,6 +53,21 @@ Recharts · FastAPI · Pydantic · SQLite · Google Gemini API.
 
 ---
 
+## ✅ Challenge Theme Coverage
+
+| Required Theme | Delivered As |
+|---|---|
+| Navigation | Trikkie AI Copilot (gate/seat directions) + Accessibility route planner |
+| Crowd Management | Crowd Intelligence Dashboard (live occupancy + AI recommendations) |
+| Accessibility | Accessibility Assistant (routing, voice input, TTS, high contrast, large text, keyboard nav, ARIA labels) |
+| Transportation guidance | Trikkie AI Copilot (parking + public transport knowledge base) + Accessible routing |
+| Sustainability | Sustainability Dashboard (live metrics + AI optimization suggestions) |
+| Multilingual assistance | Trikkie AI Copilot, responds natively in 6 languages |
+| Operational Intelligence | Crowd Intelligence Dashboard's AI-generated staff recommendations |
+| Real-time decision support | Emergency Assistant (AI-triaged priority, actions, evacuation routing) |
+
+---
+
 ## 🚀 Getting Started
 
 ### Prerequisites

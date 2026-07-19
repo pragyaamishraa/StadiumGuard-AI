@@ -1,5 +1,5 @@
 """Accessibility Assistant endpoints."""
-from fastapi import APIRouter
+from fastapi import APIRouter, HTTPException
 
 from backend.models.schemas import AccessibleRouteRequest, AccessibleRouteResponse
 from backend.core.security import sanitize_text
@@ -23,8 +23,11 @@ async def get_accessible_route(request: AccessibleRouteRequest) -> AccessibleRou
     physical routing should be reliable and reproducible rather than
     generative — a good example of using AI only where it adds value.
     """
-    start = sanitize_text(request.start, max_length=100)
-    destination = sanitize_text(request.destination, max_length=100)
+    try:
+        start = sanitize_text(request.start, max_length=100)
+        destination = sanitize_text(request.destination, max_length=100)
+    except ValueError as exc:
+        raise HTTPException(status_code=422, detail=str(exc)) from exc
 
     steps = [
         f"Start at {start} and proceed to the nearest ramp or elevator access point.",
