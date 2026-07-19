@@ -26,7 +26,7 @@ export default function Copilot() {
   const [messages, setMessages] = useState([
     {
       role: "assistant",
-      text: "Hi! I'm your Stadium Copilot. Ask me about gates, seating, restrooms, food, rules, or emergencies.",
+      text: "Hey, I'm Trikkie ⚽ — your stadium sidekick. Ask me about gates, seating, restrooms, food, rules, or emergencies.",
       sources: [],
     },
   ]);
@@ -74,11 +74,19 @@ export default function Copilot() {
 
   return (
     <div className="mx-auto flex max-w-4xl flex-col px-4 py-8 sm:px-6 animate-fade-in">
-      <h1 className="mb-1 text-2xl font-extrabold">AI Stadium Copilot</h1>
-      <p className="mb-5 text-sm text-slate-400">
-        Grounded in the stadium's knowledge base — gates, seating, rules, food,
-        accessibility, and emergency procedures.
-      </p>
+      <div className="mb-5 flex items-center gap-3">
+        <span className="grid h-11 w-11 flex-shrink-0 place-items-center rounded-2xl bg-gradient-to-br from-stadium-pitch to-stadium-primary text-lg font-black text-stadium-bg shadow-pitchGlow">
+          ⚽
+        </span>
+        <div>
+          <h1 className="font-display text-4xl leading-none tracking-wide">
+            MEET <span className="gradient-text">TRIKKIE</span>
+          </h1>
+          <p className="text-sm text-slate-400">
+            Your AI stadium sidekick — grounded in real gate, seating, rules, and safety info.
+          </p>
+        </div>
+      </div>
 
       <div className="mb-4 flex flex-wrap gap-2">
         {SUGGESTED_QUESTIONS.map((q) => (
@@ -110,7 +118,7 @@ export default function Copilot() {
                 <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-stadium-primary [animation-delay:-0.15s]" />
                 <span className="h-1.5 w-1.5 animate-bounce rounded-full bg-stadium-primary" />
               </span>
-              Copilot is thinking…
+              Trikkie is thinking…
             </div>
           )}
         </div>

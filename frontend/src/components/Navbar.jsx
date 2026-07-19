@@ -15,7 +15,7 @@ import { useLanguage, SUPPORTED_LANGUAGES } from "../context/LanguageContext.jsx
 
 const NAV_ITEMS = [
   { to: "/", label: "Home", icon: FiHome, end: true },
-  { to: "/copilot", label: "Stadium Copilot", icon: FiMessageCircle },
+  { to: "/copilot", label: "Trikkie", icon: FiMessageCircle },
   { to: "/crowd", label: "Crowd Intelligence", icon: FiActivity },
   { to: "/accessibility", label: "Accessibility", icon: FiHeart },
   { to: "/emergency", label: "Emergency", icon: FiAlertTriangle },
@@ -33,10 +33,13 @@ export default function Navbar() {
         aria-label="Primary"
       >
         <NavLink to="/" className="flex items-center gap-2 font-extrabold text-lg">
-          <span className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-stadium-primary to-stadium-accent text-stadium-bg">
+          <span className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-stadium-pitch to-stadium-primary text-stadium-bg shadow-pitchGlow">
             SG
           </span>
           <span className="hidden sm:inline">Stadium Guardian AI</span>
+          <span className="hidden rounded-full border border-stadium-gold/40 bg-stadium-gold/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wider text-stadium-gold md:inline">
+            WC 2026
+          </span>
         </NavLink>
 
         <div className="hidden items-center gap-1 lg:flex">
