@@ -41,8 +41,11 @@ export default function Sustainability() {
     }
   };
 
+  // Intentionally runs once on mount only — load is re-created each render
+  // but doesn't need to be re-triggered on its own change.
   useEffect(() => {
     load();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
