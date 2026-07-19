@@ -38,6 +38,9 @@ export function AccessibilityProvider({ children }) {
     window.speechSynthesis.speak(utterance);
   };
 
+  // speak/forceSpeak intentionally excluded from deps: they're plain closures
+  // (not wrapped in useCallback) that already capture ttsEnabled, which is
+  // tracked below — including them would defeat the memoization entirely.
   const value = useMemo(
     () => ({
       highContrast,
@@ -49,6 +52,7 @@ export function AccessibilityProvider({ children }) {
       speak,
       forceSpeak,
     }),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [highContrast, largeText, ttsEnabled]
   );
 
